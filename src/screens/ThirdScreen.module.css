@@ -1,0 +1,140 @@
+.title {
+   font-family: 'Assistant';
+   font-size: 2.5rem;
+
+   background: linear-gradient(45deg, 
+       #850000 0%,    /* אדום-בורדו עמוק */
+       #491111 8%,    /* אדום בורדו בהיר */
+       #8B0000 16%,   /* אדום כהה */
+       #7B0E14 24%,   /* אדום-ורוד בהיר */
+       #491111 32%,   /* בורדו אדום */
+       #7B0E14 40%,   /* אדום-ורוד עדין */
+       #491111 48%,   /* אדום כהה */
+       #7B0E14 56%,   /* אדום בהיר */
+       #9B111E 64%,   /* בורדו אדום עמוק */
+       #7B0E14 72%,   /* אדום-ורוד */
+       #491111 80%,   /* בורדו אדום קלאסי */
+       #7B0E14 88%,   /* אדום-ורוד עדין מאוד */
+       #720000 100%   /* חזרה לצבע הבסיס */
+   );
+   direction: rtl;
+   -webkit-background-clip: text;
+   background-clip: text;
+   color: transparent;
+   margin: 2% auto;
+   text-align: center;
+}
+
+.imageContainer {
+   width: 40%;
+   margin: 0 auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.image {
+   width: 100%;
+   height: auto;
+   object-fit: contain;
+}
+
+/* מתחת ל-350px */
+@media (max-width: 349px) {
+   .title {
+       font-size: 1.8rem;
+   }
+   .imageContainer {
+       width: 95%;
+   }
+}
+
+/* 350px-450px */
+@media (min-width: 350px) and (max-width: 450px) {
+   .title {
+       font-size: 1.8rem;
+   }
+   .imageContainer {
+       width: 90%;
+   }
+}
+
+/* 450px-550px */
+@media (min-width: 451px) and (max-width: 550px) {
+   .title {
+       font-size: 2rem;
+   }
+   .imageContainer {
+       width: 85%;
+   }
+}
+
+/* 550px-650px */
+@media (min-width: 551px) and (max-width: 650px) {
+   .title {
+       font-size: 2rem;
+   }
+   .imageContainer {
+       width: 80%;
+   }
+}
+
+/* 650px-750px */
+@media (min-width: 651px) and (max-width: 750px) {
+   .title {
+       font-size: 2rem;
+   }
+   .imageContainer {
+       width: 75%;
+   }
+}
+
+/* 750px-850px */
+@media (min-width: 751px) and (max-width: 850px) {
+   .title {
+       font-size: 2rem;
+   }
+   .imageContainer {
+       width: 65%;
+   }
+}
+
+/* 850px-950px */
+@media (min-width: 851px) and (max-width: 950px) {
+   .title {
+       font-size: 2rem;
+   }
+   .imageContainer {
+       width: 55%;
+   }
+}
+
+/* 950px-1050px */
+@media (min-width: 951px) and (max-width: 1050px) {
+   .title {
+       font-size: 2.1rem;
+   }
+   .imageContainer {
+       width: 50%;
+   }
+}
+
+/* 1050px-1150px */
+@media (min-width: 1051px) and (max-width: 1150px) {
+   .title {
+       font-size: 2.3rem;
+   }
+   .imageContainer {
+       width: 45%;
+   }
+}
+
+/* 1150px-1250px */
+@media (min-width: 1151px) and (max-width: 1250px) {
+   .title {
+       font-size: 2.4rem;
+   }
+   .imageContainer {
+       width: 40%;
+   }
+}

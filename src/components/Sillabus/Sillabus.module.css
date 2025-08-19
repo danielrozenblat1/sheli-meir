@@ -1,0 +1,907 @@
+.container {
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: 'Assistant', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.wrapper {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 2rem;
+}
+
+.wrapper:hover {
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.drawerHeader {
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.drawerHeader:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.titleSection {
+  flex: 1;
+}
+
+.drawerTitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: white;
+  margin: 0 0 0.5rem 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.drawerDescription {
+  font-size: 1rem;
+  color: white;
+  margin: 0;
+  opacity: 0.9;
+  font-weight: 400;
+  font-family: 'AssistantR', sans-serif;
+}
+
+.toggleIcon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.2s ease;
+}
+
+.toggleIcon:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.drawerContent {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
+  opacity: 0;
+}
+
+.drawerContent.open {
+  max-height: none;
+  overflow: visible;
+  opacity: 1;
+}
+
+.contentInner {
+  padding: 2rem 2rem 2rem 2rem;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.infoGrid {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.infoCard {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  transition: all 0.2s ease;
+}
+
+.infoCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(114, 47, 55, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.infoText {
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 500;
+  font-family: 'AssistantR', sans-serif;
+}
+
+.daysContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.dayCard {
+  background: rgba(245, 245, 245, 0.5);
+  border-radius: 15px;
+  padding: 2rem;
+  border: 1px solid rgba(200, 200, 200, 0.3);
+  box-shadow: 0 8px 25px rgba(180, 180, 180, 0.15);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.dayCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(180, 180, 180, 0.2);
+}
+
+.dayCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(114, 47, 55, 0.03), rgba(157, 68, 80, 0.02));
+  opacity: 0.1;
+  z-index: -1;
+  filter: blur(8px);
+}
+
+.day01::before {
+  background: linear-gradient(135deg, rgba(114, 47, 55, 0.05), rgba(157, 68, 80, 0.03));
+}
+
+.day02::before {
+  background: linear-gradient(135deg, rgba(114, 47, 55, 0.04), rgba(157, 68, 80, 0.03));
+}
+
+.day03::before {
+  background: linear-gradient(135deg, rgba(114, 47, 55, 0.03), rgba(157, 68, 80, 0.04));
+}
+
+.day04::before {
+  background: linear-gradient(135deg, rgba(114, 47, 55, 0.06), rgba(157, 68, 80, 0.02));
+}
+
+.day05::before {
+  background: linear-gradient(135deg, rgba(114, 47, 55, 0.02), rgba(157, 68, 80, 0.05));
+}
+
+.day06::before {
+  background: linear-gradient(135deg, rgba(114, 47, 55, 0.08), rgba(157, 68, 80, 0.04));
+}
+
+.dayHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.dayTitle {
+  font-size: 1.5rem;
+  color: #722f37;
+  font-weight: 500;
+  font-family: 'Assistant', sans-serif;
+  margin: 0;
+}
+
+.dayNumber {
+  font-size: 4.5rem;
+  font-weight: 200;
+  color: #722f37;
+  font-family: "Assistant";
+  line-height: 1;
+  text-shadow: 0 2px 4px rgba(114, 47, 55, 0.2);
+}
+
+.itemList {
+  display: grid;
+  gap: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(192, 192, 192, 0.2);
+  backdrop-filter: blur(4px);
+}
+
+.item:hover {
+  transform: translateX(-4px);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(192, 192, 192, 0.3);
+  box-shadow: 0 4px 15px rgba(192, 192, 192, 0.1);
+}
+
+.itemIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #722f37;
+  flex-shrink: 0;
+}
+
+.itemText {
+  color: #722f37;
+  font-size: 0.95rem;
+  font-family: 'AssistantR', sans-serif;
+  font-weight: 500;
+}
+
+.actionButtonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+
+.actionButton {
+  background: linear-gradient(135deg, #722f37, #4a171e);
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'AssistantR', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(114, 47, 55, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.actionButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.actionButton:hover::before {
+  left: 100%;
+}
+
+.actionButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(114, 47, 55, 0.4);
+}
+
+.actionButton:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(114, 47, 55, 0.3);
+}
+
+/* מתחת ל-350px - המסך הכי קטן, 90% רוחב */
+@media (max-width: 349px) {
+  .container {
+    width: 100%;
+    margin: 1.2rem auto;
+    padding: 0;
+  }
+  
+  .wrapper {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .drawerHeader {
+    padding: 1rem 1.2rem;
+  }
+  
+  .headerContent {
+    gap: 0.5rem;
+  }
+  
+  .drawerTitle {
+    font-size: 1.3rem;
+  }
+  
+  .drawerDescription {
+    font-size: 0.8rem;
+  }
+  
+  .toggleIcon {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .contentInner {
+    padding: 1.2rem 1rem 1.5rem 1rem;
+  }
+  
+  .infoGrid {
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .infoCard {
+    padding: 0.6rem 1rem;
+  }
+  
+  .infoText {
+    font-size: 0.8rem;
+  }
+  
+  .dayCard {
+    padding: 1.2rem;
+    border-radius: 12px;
+  }
+  
+  .dayNumber {
+    font-size: 2.5rem;
+  }
+  
+  .dayTitle {
+    font-size: 1.1rem;
+  }
+  
+  .item {
+    padding: 0.7rem;
+  }
+  
+  .itemText {
+    font-size: 0.8rem;
+  }
+  
+  .actionButton {
+    padding: 0.8rem 1.8rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* 350-450px */
+@media (min-width: 350px) and (max-width: 449px) {
+  .container {
+    width: 100%;
+    margin: 1.2rem auto;
+    padding: 0;
+  }
+  
+  .wrapper {
+    width: 100%;
+    border-radius: 16px;
+  }
+  
+  .drawerHeader {
+    padding: 1.2rem 1.4rem;
+  }
+  
+  .drawerTitle {
+    font-size: 1.4rem;
+  }
+  
+  .drawerDescription {
+    font-size: 0.85rem;
+  }
+  
+  .toggleIcon {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .contentInner {
+    padding: 1.4rem 1.2rem 1.7rem 1.2rem;
+  }
+  
+  .infoGrid {
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.7rem;
+  }
+  
+  .infoCard {
+    padding: 0.7rem 1.2rem;
+  }
+  
+  .infoText {
+    font-size: 0.85rem;
+  }
+  
+  .dayCard {
+    padding: 1.4rem;
+  }
+  
+  .dayNumber {
+    font-size: 3rem;
+  }
+  
+  .dayTitle {
+    font-size: 1.2rem;
+  }
+  
+  .item {
+    padding: 0.8rem;
+  }
+  
+  .itemText {
+    font-size: 0.85rem;
+  }
+  
+  .actionButton {
+    padding: 0.85rem 2rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* 450-550px */
+@media (min-width: 450px) and (max-width: 549px) {
+  .container {
+    width: 95%;
+    margin: 1.2rem auto;
+    padding: 0;
+  }
+  
+  .wrapper {
+    width: 100%;
+    border-radius: 17px;
+  }
+  
+  .drawerHeader {
+    padding: 1.4rem 1.6rem;
+  }
+  
+  .drawerTitle {
+    font-size: 1.5rem;
+  }
+  
+  .drawerDescription {
+    font-size: 0.9rem;
+  }
+  
+  .toggleIcon {
+    width: 37px;
+    height: 37px;
+  }
+  
+  .contentInner {
+    padding: 1.6rem 1.4rem 1.8rem 1.4rem;
+  }
+  
+  .infoGrid {
+    flex-direction: column;
+    gap: 1.1rem;
+    margin-bottom: 1.8rem;
+  }
+  
+  .infoCard {
+    padding: 0.8rem 1.3rem;
+  }
+  
+  .infoText {
+    font-size: 0.9rem;
+  }
+  
+  .dayCard {
+    padding: 1.6rem;
+  }
+  
+  .dayNumber {
+    font-size: 3.5rem;
+  }
+  
+  .dayTitle {
+    font-size: 1.3rem;
+  }
+  
+  .item {
+    padding: 0.85rem;
+  }
+  
+  .itemText {
+    font-size: 0.9rem;
+  }
+  
+  .actionButton {
+    padding: 0.9rem 2.2rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* 550-650px */
+@media (min-width: 550px) and (max-width: 649px) {
+  .container {
+    width: 85%;
+    margin: 1.2rem auto;
+    padding: 0;
+  }
+  
+  .wrapper {
+    width: 100%;
+    border-radius: 18px;
+  }
+  
+  .drawerHeader {
+    padding: 1.5rem 1.7rem;
+  }
+  
+  .drawerTitle {
+    font-size: 1.6rem;
+  }
+  
+  .drawerDescription {
+    font-size: 0.95rem;
+  }
+  
+  .toggleIcon {
+    width: 38px;
+    height: 38px;
+  }
+  
+  .contentInner {
+    padding: 1.7rem 1.5rem 1.9rem 1.5rem;
+  }
+  
+  .infoGrid {
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    margin-bottom: 1.9rem;
+  }
+  
+  .infoCard {
+    padding: 0.8rem 1.4rem;
+  }
+  
+  .infoText {
+    font-size: 0.92rem;
+  }
+  
+  .dayCard {
+    padding: 1.7rem;
+  }
+  
+  .dayNumber {
+    font-size: 3.8rem;
+  }
+  
+  .dayTitle {
+    font-size: 1.35rem;
+  }
+  
+  .item {
+    padding: 0.9rem;
+  }
+  
+  .itemText {
+    font-size: 0.92rem;
+  }
+  
+  .actionButton {
+    padding: 0.95rem 2.3rem;
+    font-size: 0.97rem;
+  }
+}
+
+/* 650-750px */
+@media (min-width: 650px) and (max-width: 749px) {
+  .container {
+    width: 80%;
+    margin: 1.2rem auto;
+    padding: 0;
+  }
+  
+  .wrapper {
+    width: 100%;
+    border-radius: 19px;
+  }
+  
+  .drawerHeader {
+    padding: 1.5rem 1.8rem;
+  }
+  
+  .drawerTitle {
+    font-size: 1.65rem;
+  }
+  
+  .drawerDescription {
+    font-size: 0.97rem;
+  }
+  
+  .contentInner {
+    padding: 1.8rem 1.6rem 2rem 1.6rem;
+  }
+  
+  .infoGrid {
+    flex-wrap: wrap;
+    gap: 1.3rem;
+    margin-bottom: 2rem;
+  }
+  
+  .infoCard {
+    padding: 0.75rem 1.4rem;
+  }
+  
+  .infoText {
+    font-size: 0.93rem;
+  }
+  
+  .dayCard {
+    padding: 1.8rem;
+  }
+  
+  .dayNumber {
+    font-size: 4rem;
+  }
+  
+  .dayTitle {
+    font-size: 1.4rem;
+  }
+  
+  .item {
+    padding: 0.95rem;
+  }
+  
+  .itemText {
+    font-size: 0.93rem;
+  }
+  
+  .actionButton {
+    padding: 0.97rem 2.4rem;
+    font-size: 0.98rem;
+  }
+}
+
+/* 750-850px */
+@media (min-width: 750px) and (max-width: 849px) {
+  .container {
+    width: 75%;
+    margin: 1.2rem auto;
+    padding: 0;
+  }
+  
+  .wrapper {
+    width: 100%;
+    border-radius: 19px;
+  }
+  
+  .drawerHeader {
+    padding: 1.5rem 1.9rem;
+  }
+  
+  .drawerTitle {
+    font-size: 1.7rem;
+  }
+  
+  .drawerDescription {
+    font-size: 0.98rem;
+  }
+  
+  .contentInner {
+    padding: 1.9rem 1.7rem 2rem 1.7rem;
+  }
+  
+  .infoGrid {
+    flex-wrap: wrap;
+    gap: 1.4rem;
+    margin-bottom: 2rem;
+  }
+  
+  .infoCard {
+    padding: 0.75rem 1.45rem;
+  }
+  
+  .infoText {
+    font-size: 0.94rem;
+  }
+  
+  .dayCard {
+    padding: 1.9rem;
+  }
+  
+  .dayNumber {
+    font-size: 4.2rem;
+  }
+  
+  .dayTitle {
+    font-size: 1.45rem;
+  }
+  
+  .item {
+    padding: 0.97rem;
+  }
+  
+  .itemText {
+    font-size: 0.94rem;
+  }
+  
+  .actionButton {
+    padding: 0.98rem 2.45rem;
+    font-size: 0.99rem;
+  }
+}
+
+/* 850-950px */
+@media (min-width: 850px) and (max-width: 949px) {
+  .container {
+    width: 70%;
+    margin: 1.2rem auto;
+    padding: 0;
+  }
+  
+  .wrapper {
+    width: 100%;
+    border-radius: 20px;
+  }
+  
+  .drawerHeader {
+    padding: 1.5rem 2rem;
+  }
+  
+  .drawerTitle {
+    font-size: 1.75rem;
+  }
+  
+  .drawerDescription {
+    font-size: 0.99rem;
+  }
+  
+  .contentInner {
+    padding: 2rem 1.8rem 2rem 1.8rem;
+  }
+  
+  .infoGrid {
+    flex-wrap: wrap;
+    gap: 1.45rem;
+    margin-bottom: 2rem;
+  }
+  
+  .infoCard {
+    padding: 0.75rem 1.5rem;
+  }
+  
+  .dayCard {
+    padding: 2rem;
+  }
+  
+  .dayNumber {
+    font-size: 4.3rem;
+  }
+  
+  .dayTitle {
+    font-size: 1.47rem;
+  }
+  
+  .item {
+    padding: 0.98rem;
+  }
+  
+  .actionButton {
+    padding: 0.99rem 2.47rem;
+    font-size: 0.995rem;
+  }
+}
+
+/* 950-1050px */
+@media (min-width: 950px) and (max-width: 1049px) {
+  .container {
+    width: 65%;
+    margin: 1.2rem auto;
+    padding: 0;
+  }
+  
+  .wrapper {
+    width: 100%;
+    border-radius: 20px;
+  }
+  
+  .drawerTitle {
+    font-size: 1.77rem;
+  }
+  
+  .dayNumber {
+    font-size: 4.4rem;
+  }
+  
+  .dayTitle {
+    font-size: 1.48rem;
+  }
+  
+  .actionButton {
+    padding: 1rem 2.48rem;
+    font-size: 1rem;
+  }
+}
+
+/* 1050-1150px */
+@media (min-width: 1050px) and (max-width: 1149px) {
+  .container {
+    width: 60%;
+    margin: 1.2rem auto;
+    padding: 0;
+  }
+  
+  .wrapper {
+    width: 100%;
+  }
+  
+  .drawerTitle {
+    font-size: 1.79rem;
+  }
+  
+  .dayNumber {
+    font-size: 4.45rem;
+  }
+  
+  .dayTitle {
+    font-size: 1.49rem;
+  }
+  
+  .actionButton {
+    padding: 1rem 2.49rem;
+  }
+}
+
+/* 1150-1250px */
+@media (min-width: 1150px) and (max-width: 1249px) {
+  .container {
+    width: 55%;
+    margin: 1.2rem auto;
+    padding: 0;
+  }
+  
+  .wrapper {
+    width: 100%;
+  }
+  
+  .drawerTitle {
+    font-size: 1.8rem;
+  }
+  
+  .dayNumber {
+    font-size: 4.5rem;
+  }
+  
+  .dayTitle {
+    font-size: 1.5rem;
+  }
+  
+  .actionButton {
+    padding: 1rem 2.5rem;
+  }
+}
+
+/* מעל 1250px - הגדלים המקוריים */
+@media (min-width: 1250px) {
+  .container {
+    max-width: 800px;
+    width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+}

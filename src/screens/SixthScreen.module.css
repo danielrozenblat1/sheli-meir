@@ -1,0 +1,96 @@
+.title {
+   font-family: 'Assistant';
+   background: linear-gradient(45deg, 
+       #850000 0%,    /* אדום-בורדו עמוק */
+       #491111 8%,    /* אדום בורדו בהיר */
+       #8B0000 16%,   /* אדום כהה */
+       #7B0E14 24%,   /* אדום-ורוד בהיר */
+       #491111 32%,   /* בורדו אדום */
+       #7B0E14 40%,   /* אדום-ורוד עדין */
+       #491111 48%,   /* אדום כהה */
+       #7B0E14 56%,   /* אדום בהיר */
+       #9B111E 64%,   /* בורדו אדום עמוק */
+       #7B0E14 72%,   /* אדום-ורוד */
+       #491111 80%,   /* בורדו אדום קלאסי */
+       #7B0E14 88%,   /* אדום-ורוד עדין מאוד */
+       #720000 100%   /* חזרה לצבע הבסיס */
+   );
+   direction: rtl;
+   -webkit-background-clip: text;
+   background-clip: text;
+   color: transparent;
+   margin: 2% auto;
+   text-align: center;
+   font-size: 2.5rem; /* ברירת מחדל לגדלים גדולים */
+}
+
+/* גדלים מעל 1150px */
+@media (min-width: 1150px) and (max-width: 1250px) {
+   .title {
+       font-size: 2.5rem;
+   }
+}
+
+/* 1050-1150px */
+@media (min-width: 1050px) and (max-width: 1149px) {
+   .title {
+       font-size: 2.3rem;
+   }
+}
+
+/* 950-1050px */
+@media (min-width: 950px) and (max-width: 1049px) {
+   .title {
+       font-size: 2.2rem;
+   }
+}
+
+/* 850-950px */
+@media (min-width: 850px) and (max-width: 949px) {
+   .title {
+       font-size: 2.1rem;
+   }
+}
+
+/* 750-850px */
+@media (min-width: 750px) and (max-width: 849px) {
+   .title {
+       font-size: 2rem;
+   }
+}
+
+/* 650-750px */
+@media (min-width: 650px) and (max-width: 749px) {
+   .title {
+       font-size: 1.9rem;
+   }
+}
+
+/* 550-650px */
+@media (min-width: 550px) and (max-width: 649px) {
+   .title {
+       font-size: 1.75rem;
+   }
+}
+
+/* 450-550px */
+@media (min-width: 450px) and (max-width: 549px) {
+   .title {
+       font-size: 1.9rem;
+   }
+}
+
+/* 350-450px */
+@media (min-width: 350px) and (max-width: 449px) {
+   .title {
+       font-size: 1.8rem;
+   }
+}
+
+/* מתחת ל-350px */
+@media (max-width: 349px) {
+   .title {
+       font-size: 1.1rem;
+       margin: 3% auto; /* מרווח גדול יותר למסכים קטנים */
+   }
+}

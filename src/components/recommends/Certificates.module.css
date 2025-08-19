@@ -1,0 +1,272 @@
+.title {
+    font-family: 'Assistant';
+    font-size: 2.5rem;
+
+    background: linear-gradient(45deg, 
+        #850000 0%,    /* אדום-בורדו עמוק */
+        #491111 8%,    /* אדום בורדו בהיר */
+        #8B0000 16%,   /* אדום כהה */
+        #7B0E14 24%,   /* אדום-ורוד בהיר */
+        #491111 32%,   /* בורדו אדום */
+        #7B0E14 40%,   /* אדום-ורוד עדין */
+        #491111 48%,   /* אדום כהה */
+        #7B0E14 56%,   /* אדום בהיר */
+        #9B111E 64%,   /* בורדו אדום עמוק */
+        #7B0E14 72%,   /* אדום-ורוד */
+        #491111 80%,   /* בורדו אדום קלאסי */
+        #7B0E14 88%,   /* אדום-ורוד עדין מאוד */
+        #720000 100%   /* חזרה לצבע הבסיס */
+    );
+        direction: rtl;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin:2% auto;
+  text-align: center;
+    
+}
+.explain {
+  font-size: 25px;
+  direction: rtl;
+  width: 65%;
+  text-align: center;
+  margin: 2% auto;
+  font-family: "AssistantR";
+}
+
+.mainContainer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imageContainer {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.mainImage {
+  width: 35%; /* הקטנתי קצת במסכי מחשב */
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  display: block;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.1));
+}
+
+/* הקרוסלה הראשונה (למטה) */
+.carouselContainer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 140px; /* הגדלתי קצת את הגובה */
+  z-index: 2;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg, 
+    rgba(255, 255, 255, 0) 0%, 
+    rgba(255, 255, 255, 0.7) 30%, 
+    rgba(255, 255, 255, 0.9) 70%,
+    rgba(255, 255, 255, 0.95) 100%
+  );
+  mask: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  -webkit-mask: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+
+/* הקרוסלה השנייה (למעלה) */
+.carouselContainer2 {
+  position: absolute;
+  bottom: 155px; /* הוספתי יותר רווח */
+  left: 0;
+  width: 100%;
+  height: 140px; /* הגדלתי קצת את הגובה */
+  z-index: 3;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg, 
+    rgba(255, 255, 255, 0) 0%, 
+    rgba(255, 255, 255, 0.5) 50%, 
+    rgba(255, 255, 255, 0.7) 100%
+  );
+  mask: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  -webkit-mask: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+
+.scrollTrack {
+  display: flex;
+  width: fit-content;
+  animation: scroll 60s linear infinite;
+  gap: 20px;
+  height: 100%;
+  align-items: center;
+  padding-top: 25px;
+}
+
+.scrollTrack2 {
+  display: flex;
+  width: fit-content;
+  animation: scrollReverse 60s linear infinite; /* כיוון הפוך */
+  gap: 20px;
+  height: 100%;
+  align-items: center;
+  padding-top: 25px;
+}
+
+.scrollContainer {
+  display: flex;
+  gap: 20px;
+  height: 100%;
+  align-items: center;
+}
+
+.imageWrapper {
+  flex-shrink: 0;
+  width: 130px; /* טיפה יותר גדול */
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+
+.imageWrapper2 {
+  flex-shrink: 0;
+  width: 130px; /* טיפה יותר גדול */
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  width: 130px; /* טיפה יותר גדול */
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image2 {
+  width: 130px; /* טיפה יותר גדול */
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scrollReverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 450px) {
+  .title {
+    font-size: 1.6rem;
+  }
+  
+  .explain {
+    font-size: 18px;
+    width: 90%;
+  }
+
+  .mainImage {
+    width: 100%;
+  }
+
+  .carouselContainer {
+    height: 105px;
+  }
+
+  .carouselContainer2 {
+    bottom: 120px; /* הוספתי יותר רווח גם בטלפונים */
+    height: 105px;
+  }
+
+  .imageWrapper, .imageWrapper2 {
+    width: 100px; /* טיפה יותר גדול בטלפונים */
+  }
+
+  .image, .image2 {
+    width: 100px; /* טיפה יותר גדול בטלפונים */
+  }
+
+  .scrollTrack, .scrollTrack2 {
+    padding-top: 15px;
+  }
+}
+
+@media only screen and (min-width: 451px) and (max-width: 1050px) {
+  .title {
+    font-size: 1.8rem;
+  }
+  
+  .explain {
+    font-size: 20px;
+    width: 80%;
+  }
+
+  .mainImage {
+    width: 35%;
+  }
+
+  .carouselContainer {
+    height: 125px;
+  }
+
+  .carouselContainer2 {
+    bottom: 140px; /* הוספתי יותר רווח גם בטאבלטים */
+    height: 125px;
+  }
+
+  .imageWrapper, .imageWrapper2 {
+    width: 115px; /* טיפה יותר גדול בטאבלטים */
+  }
+
+  .image, .image2 {
+    width: 115px; /* טיפה יותר גדול בטאבלטים */
+  }
+
+  .scrollTrack, .scrollTrack2 {
+    padding-top: 20px;
+  }
+}

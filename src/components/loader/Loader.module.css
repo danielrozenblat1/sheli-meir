@@ -1,0 +1,94 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+.loadingContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background: #7B0E14;
+  overflow: hidden;
+
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 2rem auto;
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.1em;
+}
+
+.letter {
+  display: inline-block;
+  animation: letterPulse 4s ease-in-out infinite;
+  margin: 0 2px;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+}
+
+@keyframes letterPulse {
+  0%, 100% {
+    transform: scale(1) translateY(0);
+    opacity: 0.8;
+  }
+  25% {
+    transform: scale(1.15) translateY(-8px);
+    opacity: 1;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    transform: scale(1.05) translateY(-3px);
+    opacity: 0.9;
+  }
+  75% {
+    transform: scale(1.1) translateY(-5px);
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.loadingContainer {
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* עבור מסכים קטנים */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5rem;
+  }
+}
