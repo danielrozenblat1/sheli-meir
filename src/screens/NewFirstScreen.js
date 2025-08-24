@@ -50,7 +50,7 @@ const FirstScreen = () => {
         <h1 className={styles.title}>SHELI MEIR</h1>
   
         <div className={styles.buttonContainer}>
-        <PinkScrollButton text="אני רוצה ללמוד את התחום" icon={learn} to="קורס"/>
+        <PinkScrollButton text="אני רוצה ללמוד את התחום" icon={learn} to="קורסים"/>
         <PinkScrollButton text="אני רוצה לקבוע טיפול" icon={treatment} to="טיפולים"/>
         </div>
       </div>
