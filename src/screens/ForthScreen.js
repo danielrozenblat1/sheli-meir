@@ -7,10 +7,11 @@ import personal from "../icons/wired-outline-645-people-handshake-transaction-ho
 import kit from "../icons/wired-outline-775-needle-hover-pinch (1).json"
 import SixthScreen from "./SixthScreen"
 import Button from "../components/button/Button"
+import SeventhScreen from "./SeventhScreen"
 const ForthScreen=()=>{
     return <>
     <div className={styles.background}>
-<div className={styles.title}>וכולן.. אבל כולן, אבל את אחת מהדרכים הבאות</div>
+<div className={styles.title}>וכולן.. אבל כולן, עברו דרך אחת מהדרכים הבאות</div>
 <div className={styles.description}>לחצי על כל אחד מהקורסים כדי לראות את הסילבוס המלא שלו</div>
 <Syllabus/>
 {/* <FloatingButton/> */}
@@ -26,6 +27,8 @@ const ForthScreen=()=>{
                description="כל תלמידה מקבלת ערכה מלאה ומפוארת עם כל הכלים המקצועיים שהיא צריכה כדי להתחיל לעבוד מיד אחרי הקורס את לא תצטרכי להשקיע עוד אפילו שקל אחד"
            />
 </div>
+<Button text="שלי, בואי נדבר!"/>
+<SeventhScreen/>
 <Button text="שלי, בואי נדבר!"/>
     </div>
     </>

@@ -3,7 +3,16 @@ import { Clock, User, ChevronDown, ChevronUp, MessageCircle, Sparkles, Eye } fro
 import styles from './Tipulim.module.css';
 import sfataim from "../../images/שלי תמונה שפתיים.png"
 import gabot from "../../images/שלי תמונה גבות.png"
-
+import gabot1 from "../../images/שלי מאיר טיפולי גבות שלה 1.png"
+import gabot2 from "../../images/שלי מאיר טיפולי גבות שלה 2.png"
+import gabot3 from "../../images/שלי מאיר טיפולי גבות שלה 3.png"
+import gabot4 from "../../images/שלי מאיר טיפולי גבות שלה 4.png"
+import gabot5 from "../../images/שלי מאיר טיפולי גבות שלה 5.png"
+import sfataim1 from "../../images/שלי מאיר טיפולי שפתיים שלה 1.png"
+import sfataim2 from "../../images/שלי מאיר טיפולי שפתיים שלה 2.png"
+import sfataim3 from "../../images/שלי מאיר טיפולי שפתיים שלה 3.png"
+import sfataim4 from "../../images/שלי מאיר טיפולי שפתיים שלה 4.png"
+import sfataim5 from "../../images/שלי מאיר טיפולי שפתיים שלה 5.png"
 const BeautyTreatments = () => {
   const treatments = [
     {
@@ -16,10 +25,11 @@ const BeautyTreatments = () => {
       process: 'ייעוץ מקדים וחתימה על טופס הסכמה ← עיצוב גבות אישי ובחירת צבע מתאים ← הרדמה מקומית והכנת האזור ← יצירת קווי שיער דקים באמצעות להב סטרילי ← מריחת פיגמנט איכותי במספר שכבות ← סיום ומתן הוראות טיפוח מפורטות',
       results: 'גבות טבעיות ומדויקות הנראות כמו שיער אמיתי, חיסכון משמעותי בזמן איפור יומי, מראה מושלם ויפה 24/7, עמידות של 1-3 שנים, שיפור בסימטריה ובמבנה הפנים',
       beforeAfterImages: [
-       gabot,
-        gabot,
-       gabot,
-       gabot
+       gabot1,
+        gabot2,
+       gabot3,
+       gabot4,
+          gabot5,
       ]
     },
     {
@@ -32,10 +42,11 @@ const BeautyTreatments = () => {
       process: 'ייעוץ אישי ובחירת גוון מושלם המתאים לגוון העור ← הכנת השפתיים והרדמה מקומית ← מתיחת קווי מתאר מדויקים ← מילוי צבע בטכניקה מקצועית ← יישום שכבות נוספות לעומק צבע ← סיום ומתן הוראות טיפוח מפורטות',
       results: 'שפתיים בעלות צבע עמוק, טבעי ויפה לאורך זמן, הגדרה מושלמת ומראה מלא, חיסכון משמעותי באיפור שפתיים יומי, עמידות של 2-4 שנים, שיפור בפרופורציות הפנים',
       beforeAfterImages: [
-        sfataim,
-      sfataim,
-      sfataim,
-   sfataim
+        sfataim1,
+      sfataim2,
+      sfataim3,
+   sfataim4,
+      sfataim5,
       ]
     }
   ];

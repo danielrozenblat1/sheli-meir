@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "./FifthScreen.module.css";
 import FAQItem from "../components/questions/Questions";
+import Button from "../components/button/Button";
 
 const FifthScreen = () => {
   return (
@@ -53,7 +54,7 @@ const FifthScreen = () => {
           "כמובן, זה חשוב. רק תזכרי שזו ההחלטה שלך. את זו שתחיה את הדרך הזו, את זו שתקום כל בוקר לעשייה שאת אוהבת או לא. אם יש לך שאלות שחשוב לך לענות עליהן בשבילם - אני כאן כדי לעזור. אבל ההחלטה צריכה לבוא ממך. אני כאן כדי לוודא שזו לא סתם התחלה - אלא התחלה שמובילה לתוצאה."
         }
       /> */}
-
+<Button text="לעוד שאלות לחצי כאן"/>
     </>
   );
 };

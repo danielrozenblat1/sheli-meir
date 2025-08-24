@@ -1,6 +1,7 @@
 
 import './App.css';
 import ByMe from './components/ByMe/ByMe';
+import EyelashCalculator from './components/calculate/Calculate';
 import NavBarNew from './components/CourseNav/NavBarNew';
 import FloatingButton from './components/FloatButton/FloatButton';
 import Me from './components/me/Me';
@@ -28,6 +29,7 @@ function App() {
   <ForthScreen/>
   <SixthScreen/>
   <FifthScreen/>
+ 
 <PrivacyPolicy 
   ownerName="שלי מאיר" 
   email="shelimeir998@gmail.com" 

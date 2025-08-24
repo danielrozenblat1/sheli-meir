@@ -1,0 +1,172 @@
+.title {
+    font-family: 'Assistant';
+    font-size: 2.5rem;
+color:white;
+direction: rtl;
+    margin: 2% auto;
+    text-align: center;
+}
+
+.description {
+    font-family: 'AssistantR';
+    font-size: 1.4rem;
+    margin: 2% auto;
+color:white;
+direction: rtl;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    direction: rtl;
+    margin: 2% auto;
+    width: 30%;
+}
+
+/* Media Queries for Responsive Design */
+
+/* מתחת ל-350px */
+@media (max-width: 349px) {
+    .title {
+        font-size: 1.6rem;
+    }
+    .description {
+        font-size: 1rem;
+    }
+    .row {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+/* 350px - 450px */
+@media (min-width: 350px) and (max-width: 450px) {
+    .title {
+        font-size: 1.8rem;
+    }
+    .description {
+        font-size: 1.1rem;
+        width:90%
+        
+    }
+    .row {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+/* 450px - 550px */
+@media (min-width: 450px) and (max-width: 550px) {
+    .title {
+        font-size: 2.2rem;
+    }
+    .description {
+        font-size: 1.2rem;
+    }
+    .row {
+        width: 100%;
+    }
+}
+
+/* 550px - 650px */
+@media (min-width: 550px) and (max-width: 650px) {
+    .title {
+        font-size: 2.3rem;
+    }
+    .description {
+        font-size: 1.3rem;
+    }
+    .row {
+        width: 90%;
+    }
+}
+
+/* 650px - 750px */
+@media (min-width: 650px) and (max-width: 750px) {
+    .title {
+        font-size: 2.4rem;
+    }
+    .description {
+        font-size: 1.35rem;
+    }
+    .row {
+        width: 80%;
+    }
+}
+
+/* 750px - 850px */
+@media (min-width: 750px) and (max-width: 850px) {
+    .title {
+        font-size: 2.45rem;
+    }
+    .description {
+        font-size: 1.37rem;
+    }
+    .row {
+        width: 70%;
+    }
+}
+
+/* 850px - 950px */
+@media (min-width: 850px) and (max-width: 950px) {
+    .title {
+        font-size: 2.47rem;
+    }
+    .description {
+        font-size: 1.38rem;
+    }
+    .row {
+        width: 60%;
+    }
+}
+
+/* 950px - 1050px */
+@media (min-width: 950px) and (max-width: 1050px) {
+    .title {
+        font-size: 2.48rem;
+    }
+    .description {
+        font-size: 1.39rem;
+    }
+    .row {
+        width: 50%;
+    }
+}
+
+/* 1050px - 1150px */
+@media (min-width: 1050px) and (max-width: 1150px) {
+    .title {
+        font-size: 2.49rem;
+    }
+    .description {
+        font-size: 1.395rem;
+    }
+    .row {
+        width: 40%;
+    }
+}
+
+/* 1150px - 1250px */
+@media (min-width: 1150px) and (max-width: 1250px) {
+    .title {
+        font-size: 2.5rem;
+    }
+    .description {
+        font-size: 1.4rem;
+    }
+    .row {
+        width: 35%;
+    }
+}
+
+/* מעל 1250px - שמירה על הגדלים המקוריים */
+@media (min-width: 1250px) {
+    .row {
+        width: 30%;
+    }
+  }

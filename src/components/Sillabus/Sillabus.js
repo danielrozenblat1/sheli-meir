@@ -115,7 +115,7 @@ const SyllabusDrawer = () => {
           "תאוריה עיונית עיצוב גבות טבעיות + מודליסטית",
           "עקרונות בסיסיים של צורת הגבה צבע ומרקם השיערה",
           "הכרת הטכניקות והשיטות השונות",
-          "הסבר על שיטת המיקרובליידינג",
+      
           "התאמת הצבעים לגוון העור",
           "מדידה ושרטוט בצורה נכונה",
           "הכרת המכשיר הידני וסוגי מחטים",
@@ -129,13 +129,13 @@ const SyllabusDrawer = () => {
         number: "02",
         content: [
           "תאוריה עיונית על שיטת המיקרובליידינג",
-          "עיצוב גבות טבעיות בחוט פינצטה מספריים ושעווה",
+     
           "עקרונות בסיסיים של צוית הגבה צבע ומרקם השיערה",
-          "התאמת הצבעים לגוון העור",
+      
           "מדידה ושרטוט בצורה נכונה",
           "הכרת המכשיר הידני וסוגי מחטים",
           "הסבר על שיטת המיקרובליידינג",
-          "התאמת הצבעים לגוון העור"
+       
         ]
       },
       {
@@ -358,7 +358,7 @@ const SyllabusDrawer = () => {
             <div className={styles.infoGrid}>
               <div className={styles.infoCard}>
                 <Clock color='white' size={20} />
-                <span className={styles.infoText}>09:30 - 12:30</span>
+                <span className={styles.infoText}>10:00 - 13:00</span>
               </div>
               <div className={styles.infoCard}>
                 <MapPin color='white' size={20} />
@@ -418,7 +418,7 @@ const SyllabusDrawer = () => {
             <div className={styles.infoGrid}>
               <div className={styles.infoCard}>
                 <Clock color='white' size={20} />
-                <span className={styles.infoText}>09:30 - 15:30</span>
+                <span className={styles.infoText}>10:00 - 13:00</span>
               </div>
               <div className={styles.infoCard}>
                 <MapPin color='white' size={20} />
@@ -465,7 +465,7 @@ const SyllabusDrawer = () => {
           <div className={styles.headerContent}>
             <div className={styles.titleSection}>
               <h2 className={styles.drawerTitle}>קורס עיצוב ושיקום גבות טבעיות</h2>
-              <p className={styles.drawerDescription}>מפגש אחד, 6 שעות</p>
+              <p className={styles.drawerDescription}>2 מפגשים, 6 שעות</p>
             </div>
             <div className={styles.toggleIcon}>
               {naturalBrowsIsOpen ? <Minus size={24} color="white" /> : <Plus size={24} color="white" />}
@@ -478,7 +478,7 @@ const SyllabusDrawer = () => {
             <div className={styles.infoGrid}>
               <div className={styles.infoCard}>
                 <Clock color='white' size={20} />
-                <span className={styles.infoText}>09:30 - 16:30</span>
+             <span className={styles.infoText}>10:00 - 13:00</span>
               </div>
               <div className={styles.infoCard}>
                 <MapPin color='white' size={20} />
