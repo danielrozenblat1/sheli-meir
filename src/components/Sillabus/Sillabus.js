@@ -214,7 +214,7 @@ const SyllabusDrawer = () => {
       "הסבר על שיטת המיקרובליידינג": <ScanLine color='#722f37' />,
       "התאמת הצבעים לגוון העור": <Palette color='#722f37' />,
       "מדידה ושרטוט בצורה נכונה": <PenTool color='#722f37' />,
-      "הכרת המכשיר הידני וסוגי מחטים": <Hand color='#722f37' />,
+   
       "סוגי העור ואיבחון העור": <Shield color='#722f37' />,
       "למי אסור לבצע את הטיפול (מצבים רפואיים)": <AlertCircle color='#722f37' />,
       "איסורים בטיפול": <AlertCircle color='#722f37' />,
@@ -405,7 +405,7 @@ const SyllabusDrawer = () => {
           <div className={styles.headerContent}>
             <div className={styles.titleSection}>
               <h2 className={styles.drawerTitle}>קורס מיקרופיגמנטציה - גבות</h2>
-              <p className={styles.drawerDescription}>6 מפגשים, כ-5 שעות כל מפגש</p>
+              <p className={styles.drawerDescription}>6 מפגשים, כ-3 שעות כל מפגש</p>
             </div>
             <div className={styles.toggleIcon}>
               {browsIsOpen ? <Minus size={24} color="white" /> : <Plus size={24} color="white" />}
