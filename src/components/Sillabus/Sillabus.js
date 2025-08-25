@@ -202,6 +202,16 @@ const SyllabusDrawer = () => {
           "שעה חמישית - שיווק ברשתות החברתיות וצילום",
           "שעה שישית - מעשי על מודליסטיות"
         ]
+      },
+      {
+        number: "02",
+        content: [
+          "תרגול מעשי מתקדם על מודליסטיות",
+       
+         
+          "חלוקת תעודות והסמכה",
+          "סיכום הקורס והכנה לפתיחת עסק עצמאי"
+        ]
       }
     ]
   };
@@ -262,7 +272,17 @@ const SyllabusDrawer = () => {
       "שעה שלישית - שרטוט ומדידה": <PenTool color='#722f37' />,
       "שעה רביעית - למידת הטכניקה בחוט / פינצטה מספריים ושעווה": <Scissors color='#722f37' />,
       "שעה חמישית - שיווק ברשתות החברתיות וצילום": <Instagram color='#722f37' />,
-      "שעה שישית - מעשי על מודליסטיות": <Users color='#722f37' />
+      "שעה שישית - מעשי על מודליסטיות": <Users color='#722f37' />,
+      "מפגש מעשי מתקדם על מודליסטיות": <Hand color='#722f37' />,
+      "הערכת התוצאות מהמפגש הקודם": <ScanLine color='#722f37' />,
+      "טכניקות עיצוב מתקדמות לגבות בעייתיות": <Award color='#722f37' />,
+      "תיקון וחידוד צורת הגבות": <PenTool color='#722f37' />,
+      "עבודה על סימטריה מדויקת": <Hand color='#722f37' />,
+      "תרגול עם כלים מקצועיים מתקדמים": <Scissors color='#722f37' />,
+      "פיתוח סגנון אישי בעיצוב גבות": <Palette color='#722f37' />,
+      "בניית ביטחון מקצועי ומהירות בעבודה": <Award color='#722f37' />,
+      "חלוקת תעודות והסמכה": <GraduationCap color='#722f37' />,
+      "סיכום הקורס והכנה לפתיחת עסק עצמאי": <Trophy color='#722f37' />
     };
   
     return iconMap[content] || <Sparkles color='#722f37' />;
@@ -465,7 +485,7 @@ const SyllabusDrawer = () => {
           <div className={styles.headerContent}>
             <div className={styles.titleSection}>
               <h2 className={styles.drawerTitle}>קורס עיצוב ושיקום גבות טבעיות</h2>
-              <p className={styles.drawerDescription}>2 מפגשים, 6 שעות</p>
+              <p className={styles.drawerDescription}>2 מפגשים, 6 שעות כל מפגש</p>
             </div>
             <div className={styles.toggleIcon}>
               {naturalBrowsIsOpen ? <Minus size={24} color="white" /> : <Plus size={24} color="white" />}
@@ -478,7 +498,7 @@ const SyllabusDrawer = () => {
             <div className={styles.infoGrid}>
               <div className={styles.infoCard}>
                 <Clock color='white' size={20} />
-             <span className={styles.infoText}>10:00 - 13:00</span>
+                <span className={styles.infoText}>10:00 - 16:00</span>
               </div>
               <div className={styles.infoCard}>
                 <MapPin color='white' size={20} />
