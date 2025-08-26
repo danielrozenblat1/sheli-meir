@@ -16,8 +16,7 @@ const FirstScreen = () => {
   useEffect(() => {
     const imageUrls = [
       middleImage,
-      rightImage,
-      leftImage
+
     ];
 
     const loadImage = (url) => {
